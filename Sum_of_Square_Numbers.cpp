@@ -19,3 +19,22 @@ public:
         return false;
     }
 };
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+class Solution {
+    bool isPerfectSquare(int num) {
+        long double sq=sqrt(num);
+        return (sq-floor(sq)==0);
+    }
+public:
+    bool judgeSquareSum(int c) {
+        for(int i=0;i<=sqrt(c);i++){
+            int diff=c-(i*i);
+            if(isPerfectSquare(diff)){
+                return true;
+            }
+        }
+        return false;
+    }
+};
